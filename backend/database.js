@@ -5,7 +5,7 @@ const mysql = require("mysql2");
 dotenv.config();
 const cn = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQL_ROOT_PASSWORD}@${process.env.RAILWAY_PRIVATE_DOMAIN}:3306/${process.env.MYSQL_DATABASE}`
 // Create a connection using environment variables
-const connection = mysql.createConnection(cn);
+const connection = mysql.createConnection('mysql://root:ESvnPfJYYroslFuRWFchPuHfVTSHLjZV@junction.proxy.rlwy.net:49786/railway');
 
 // Establish connection
 connection.connect((err) => {
@@ -17,3 +17,7 @@ connection.connect((err) => {
 });
 
 module.exports = connection;
+
+
+
+'mysql://root:ESvnPfJYYroslFuRWFchPuHfVTSHLjZV@junction.proxy.rlwy.net:49786/railway'
